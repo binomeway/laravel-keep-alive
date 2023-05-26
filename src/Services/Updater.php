@@ -2,7 +2,6 @@
 
 namespace BinomeWay\KeepAlive\Services;
 
-use BinomeWay\KeepAlive\Actions\Action;
 use BinomeWay\KeepAlive\Concerns\HasCommand;
 use BinomeWay\KeepAlive\Concerns\WithProgress;
 use BinomeWay\KeepAlive\Contracts\Result;
@@ -27,7 +26,7 @@ class Updater implements RunnableAction
      */
     public function run(): Result
     {
-        if (!$this->shouldUpdate()) {
+        if (! $this->shouldUpdate()) {
 
             return RunResult::success(__('Application is up to date.'));
         }
@@ -50,7 +49,7 @@ class Updater implements RunnableAction
 
         foreach ($this->updates as $edition => $actions) {
 
-            if (!Version::compare($edition, '<')) {
+            if (! Version::compare($edition, '<')) {
                 continue;
             }
 
@@ -74,7 +73,7 @@ class Updater implements RunnableAction
         $this->progressFinish();
 
         return RunResult::success(__('App updated to the latest version :version', [
-            'version' => Version::value()
+            'version' => Version::value(),
         ]));
     }
 
@@ -83,7 +82,6 @@ class Updater implements RunnableAction
         if (empty($this->updates)) {
             return false;
         }
-
 
         if (Version::isLatest()) {
             return false;
@@ -97,5 +95,4 @@ class Updater implements RunnableAction
 
         return false;
     }
-
 }

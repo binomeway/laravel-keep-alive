@@ -2,9 +2,9 @@
 
 namespace BinomeWay\KeepAlive\Tests;
 
+use BinomeWay\KeepAlive\KeepAliveServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use BinomeWay\KeepAlive\KeepAliveServiceProvider;
 
 class TestCase extends Orchestra
 {

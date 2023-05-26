@@ -2,11 +2,12 @@
 
 namespace BinomeWay\KeepAlive;
 
-
 use BinomeWay\KeepAlive\Commands\AppInstallCommand;
 use BinomeWay\KeepAlive\Commands\AppUpdateCommand;
 use BinomeWay\KeepAlive\Contracts\VersionRepository;
-use BinomeWay\KeepAlive\Services\{Installer, Updater, Version};
+use BinomeWay\KeepAlive\Services\Installer;
+use BinomeWay\KeepAlive\Services\Updater;
+use BinomeWay\KeepAlive\Services\Version;
 use Closure;
 use Illuminate\Foundation\Console\AboutCommand;
 use Psr\Container\ContainerExceptionInterface;

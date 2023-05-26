@@ -40,7 +40,6 @@ class AppUpdateCommand extends Command
             return Command::SUCCESS;
         }
 
-
         $this->error($message);
 
         return Command::FAILURE;

@@ -11,6 +11,6 @@ class Version extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-       return \BinomeWay\KeepAlive\Services\Version::class;
+        return \BinomeWay\KeepAlive\Services\Version::class;
     }
 }

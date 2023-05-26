@@ -24,12 +24,10 @@ trait WithProgress
         }
     }
 
-
     protected function progressFinish(): void
     {
         if (app()->runningInConsole()) {
             $this->command->getOutput()->progressFinish();
         }
     }
-
 }

@@ -1,7 +1,7 @@
 <?php
 
-
-use BinomeWay\KeepAlive\Actions\{RunMigrationsAction, SummaryAction};
+use BinomeWay\KeepAlive\Actions\RunMigrationsAction;
+use BinomeWay\KeepAlive\Actions\SummaryAction;
 
 return [
 

@@ -2,7 +2,6 @@
 
 namespace BinomeWay\KeepAlive\Commands;
 
-
 use BinomeWay\KeepAlive\Facades\Installer;
 use Illuminate\Console\Command;
 
@@ -24,6 +23,7 @@ class AppInstallCommand extends Command
 
     /**
      * Execute the console command.
+     *
      * @throws \Exception
      */
     public function handle(): int
@@ -37,7 +37,6 @@ class AppInstallCommand extends Command
 
             return Command::SUCCESS;
         }
-
 
         $this->error($message);
 

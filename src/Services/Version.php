@@ -13,7 +13,7 @@ final class Version
 
     public function __construct(
         protected readonly VersionRepository $repository,
-        protected readonly string            $latestVersion = '0.0.0')
+        protected readonly string $latestVersion = '0.0.0')
     {
         $this->current = $this->repository->get($this->latestVersion);
     }
@@ -67,15 +67,15 @@ final class Version
 
     public function consoleAbout(): string
     {
-        if (!$this->exists()) {
-            return "<fg=red;options=bold>NOT INSTALLED</>";
+        if (! $this->exists()) {
+            return '<fg=red;options=bold>NOT INSTALLED</>';
         }
 
         if ($this->isLatest()) {
-            return "<fg=green;options=bold>" . $this->value() . '</>';
+            return '<fg=green;options=bold>'.$this->value().'</>';
         }
 
-        return "<fg=yellow;options=bold>" . $this->value() . '</> < '
-            . "<fg=green;>" . $this->latest() . '</>';
+        return '<fg=yellow;options=bold>'.$this->value().'</> < '
+            .'<fg=green;>'.$this->latest().'</>';
     }
 }

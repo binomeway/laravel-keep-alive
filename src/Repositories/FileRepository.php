@@ -9,7 +9,7 @@ class FileRepository implements VersionRepository
 {
     public function set(string $value): bool|int
     {
-        return \File::put($this->getFilePath(),$value);
+        return \File::put($this->getFilePath(), $value);
     }
 
     public function exists(): bool

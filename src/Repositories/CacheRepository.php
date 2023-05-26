@@ -12,7 +12,7 @@ class CacheRepository implements VersionRepository
 
     public function set(string $value): bool|int
     {
-        return Cache::rememberForever(static::$cacheKey, fn() => $value);
+        return Cache::rememberForever(static::$cacheKey, fn () => $value);
     }
 
     public function exists(): bool

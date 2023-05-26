@@ -18,7 +18,6 @@ class Installer implements RunnableAction
     {
     }
 
-
     /**
      * @throws \Exception
      */
